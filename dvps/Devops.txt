@@ -1,0 +1,8 @@
+1>git bash (mobaxtem putty shell) is required launch instance
+2>created instance in AWS console what r three things to connect instance
+3>public ip
+4>username
+5>password (pem)
+
+
+ls -li(you get iNode number)

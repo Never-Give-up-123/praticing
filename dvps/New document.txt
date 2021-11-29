@@ -1,0 +1,29 @@
+sudo su
+cd /
+yum install httpd -y
+systemctl start httpd
+systemctl enable httpd
+cd /var/www/html/
+nano index.hmtl
+
+vi
+
+
+                 LAMBDA
+
+import boto3
+def lambda_handler(event, context):
+    
+    ec2 = boto3.client('ec2', region_name='ap-south-1')
+    ec2.start_instances(InstanceIds=['i-0f1ddc6bb613669f3'])
+    print('started your instances: ' + str('i-0f1ddc6bb613669f3'))
+    
+    ec2 = boto3.client('ec2', region_name='ap-south-1')
+    ec2.stop_instances(InstanceIds=['i-0780a875f369e7aa7'])
+    print('stopped your instances: ' + str('i-0780a875f369e7aa7'))
+    
+    ec2 = boto3.client('ec2', region_name='ap-south-1')
+    ec2.stop_instances(InstanceIds=['i-08615562705abef85'])
+    print('stopped your instances: ' + str('i-08615562705abef85'))
+    
+    return
